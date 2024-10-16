@@ -1,0 +1,13 @@
+package com.hypheno.hello
+
+import androidx.compose.ui.window.Window
+import androidx.compose.ui.window.application
+
+fun main() = application {
+    Window(
+        onCloseRequest = ::exitApplication,
+        title = "ComposeMPHelloWorld",
+    ) {
+        App(batteryManager = BatteryManager())
+    }
+}
