@@ -17,9 +17,7 @@ fun main() {
             onCloseRequest = ::exitApplication,
             title = "ComposeMPHelloWorld",
         ) {
-            App(
-                prefs = remember { prefs }
-            )
+            App()
         }
     }
 }

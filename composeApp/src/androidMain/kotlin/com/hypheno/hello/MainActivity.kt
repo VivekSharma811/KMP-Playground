@@ -18,9 +18,7 @@ class MainActivity : ComponentActivity() {
         installSplashScreen()
 
         setContent {
-            App(
-                prefs = remember { createDataStore(applicationContext) }
-            )
+            App()
         }
     }
 }

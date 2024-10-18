@@ -32,6 +32,8 @@ lifecycleViewModelCompose = "2.8.0"
 
 core-splashscreen = "1.0.1"
 
+datetime = "0.6.0"
+
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -73,6 +75,8 @@ moko-permissions-compose = { module = "dev.icerock.moko:permissions-compose", ve
 lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewModelCompose"}
 
 core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "core-splashscreen" }
+
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
