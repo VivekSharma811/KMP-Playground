@@ -2,14 +2,18 @@ package com.hypheno.hello
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
-import com.hypheno.hello.network.InsultCensorClient
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
 import com.hypheno.hello.ui.CensoredText
+import com.hypheno.hello.ui.ClickCounter
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
-fun App(client: InsultCensorClient) {
+fun App(
+    prefs: DataStore<Preferences>
+) {
     MaterialTheme {
-        CensoredText(client)
+        ClickCounter(prefs)
     }
 }

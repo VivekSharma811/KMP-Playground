@@ -60,6 +60,9 @@ kotlin {
             implementation(libs.navigation.compose)
 
             implementation(libs.bundles.ktor)
+
+            api(libs.datastore.preferences)
+            api(libs.datastore)
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin)
