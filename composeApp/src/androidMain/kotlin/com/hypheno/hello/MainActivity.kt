@@ -6,6 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
+import com.hypheno.hello.network.InsultCensorClient
+import com.hypheno.hello.network.createHttpClient
+import io.ktor.client.engine.okhttp.OkHttp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +16,9 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             App(
-                batteryManager = remember { BatteryManager(applicationContext) }
+                client = remember {
+                    InsultCensorClient(createHttpClient(OkHttp.create()))
+                }
             )
         }
     }
